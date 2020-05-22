@@ -1,0 +1,147 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;1,300&display=swap');
+
+html {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background: black;
+}
+
+*:focus {
+  outline: 0;
+}
+
+
+.container {
+  margin-top: -22px;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(225deg,black 60%,red,orange,yellow,white);
+  font-family: 'Roboto', sans-serif;
+}
+
+h1 {
+  font-weight: 300;
+  font-style: italic;
+  margin-left: 20px;
+  font-size: 50pt;
+}
+
+#background {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 1;
+  width: 500px;
+  height: 600px;
+  background-color: black;
+  border-radius: 0 0 0 50% / 0 0 0 100%;
+}
+
+article {
+  margin-bottom: 50px;
+}
+
+img.earth {
+  width: 250%;
+  margin-top: -160px;
+  margin-left: -290px;
+  transform-origin: center center;
+  animation: earthRotation 30s infinite linear;
+}
+
+@keyframes earthRotation {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(180deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+header {
+  position: relative;
+  z-index: 1;
+  color: white;
+  height: 200px;
+  border-radius: 0 0 50% 20% / 0 0 0 50%;
+  background: black;
+  padding: 20px 20px;
+}
+
+h2 {
+  color: white;
+  font-size: 30pt;
+  font-weight: 300;
+  font-style: italic;
+  padding-left: 10px;
+}
+
+
+details {
+  background-color: white;
+  border-radius: 10px;
+  margin: 10px;
+  font-size: 15pt;
+  padding: 20px;
+  width: 900px;
+  padding-right: 20px;
+  border-right: 40px solid white;
+}
+
+details[open] summary ~ * {
+  animation: sweep .5s ease-in-out;
+}
+
+details details {
+  width: 90%;
+  background-color: rgba(0,0,0,.2);
+}
+
+@keyframes sweep {
+  0%    {opacity: 0; margin-left: -10px}
+  100%  {opacity: 1; margin-left: 0px}
+}
+
+footer {  
+  width: 100%;
+  height: 30vh;
+  background: black;
+  padding: 20px 0 60px 20px;
+}
+
+.social {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+a {
+  color: white;
+}
+
+img.my_photo {
+  width: 100px;
+  border-radius: 50%;
+  box-shadow: 3px 3px 10px black;
+  border: 10px solid red;
+}
+
+.social a {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  background-color: red;
+  width: 70px;
+  height: 70px;
+  padding: 10px;
+  border-radius: 50%;
+}
