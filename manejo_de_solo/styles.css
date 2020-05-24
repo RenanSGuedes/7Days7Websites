@@ -20,13 +20,13 @@ html, body {
   flex-direction: row;
   font-family: 'Roboto', sans-serif;
   -webkit-font-smoothing: antialiased;
-}
+} 
 
-.container header {
+header {
+  padding-left: 20px;
   width: 40%;
   min-height: 100vh;
   height: auto;
-  padding-left: 50px;
   background-color:rgb(188, 231, 188);
 }
 
@@ -34,13 +34,12 @@ header h1 {
   font-size: 70pt;
   font-weight: 300;
   font-style: italic;
-  width: 40%;
 }
 
 article {
   width: 45%;
-  padding: 40px;
   background-color: rgb(216, 253, 224);
+  padding: 15px;
 }
 
 article h2 {
@@ -56,11 +55,11 @@ article h3 {
 
 details {
   background-color: rgba(255, 255, 255, .8);
-  padding: 40px;
+  padding: 30px;
   border-radius: 15px;
   font-size: 15pt;
-  margin: 10px;
-  width: 400px;
+  margin: 10px auto;
+  width: 80%;
 }
 
 details[open] summary ~ * {
@@ -73,8 +72,8 @@ details[open] summary ~ * {
 }
 
 details details {
-  margin-left: 30px;
-  width: 70%;
+  margin-left: 10px;
+  width: 80%;
   background: linear-gradient(120deg, rgba(0,0,0,.1), rgba(0,0,0,.3));
 }
 
@@ -107,4 +106,40 @@ img.soil {
   width: 90%;
   margin: 15px;
   border-radius: 10px;
+}
+
+
+@media (max-width: 900px) {
+  article, footer, header {
+    width: 100%;
+    padding: 0;
+  }
+  header {
+    min-height: auto;
+  }
+  h1, h2, h3 {
+    text-align: center;
+  }
+
+  header h1 {
+    font-size: 28pt;
+  }
+  article h2 {
+    font-size: 25pt;
+  }
+  article h3 {
+    font-size: 22pt;
+  }
+
+  details {
+    margin: 10px auto;
+  }
+  .container {
+    flex-direction: column;
+  }
+  footer {
+    flex-direction: row;
+    padding: 30px 0;
+    margin-bottom: -20px;
+  }
 }
