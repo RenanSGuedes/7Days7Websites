@@ -16,11 +16,9 @@ html, body {
   outline: 0;
 }
 
-
 .container {
   margin-top: -22px;
   width: 100%;
-  height: 100%;
   background: linear-gradient(225deg,black 60%,red,orange,yellow,white);
   font-family: 'Roboto', sans-serif;
 }
@@ -29,30 +27,22 @@ h1 {
   font-weight: 300;
   font-style: italic;
   margin-left: 20px;
-  font-size: 50pt;
-}
-
-#background {
-  position: absolute;
-  top: 0;
-  right: 0;
-  z-index: 1;
-  width: 500px;
-  height: 600px;
-  background-color: black;
-  border-radius: 0 0 0 50% / 0 0 0 100%;
+  font-size: 40pt;
 }
 
 article {
+  width: 100%;
   margin-bottom: 50px;
 }
 
 img.earth {
-  width: 250%;
-  margin-top: -160px;
-  margin-left: -290px;
+  position: relative;
+  margin-top: -50px;
+  z-index: -1;
+  width: 600px;
   transform-origin: center center;
   animation: earthRotation 30s infinite linear;
+  border-radius: 50%;
 }
 
 @keyframes earthRotation {
@@ -68,33 +58,55 @@ img.earth {
 }
 
 header {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: row;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
   position: relative;
   z-index: 1;
   color: white;
+  background-color: black;
   height: 200px;
-  border-radius: 0 0 50% 20% / 0 0 0 50%;
-  background: black;
   padding: 20px 20px;
 }
 
 h2 {
+  position: relative;
+  z-index: 1;
   color: white;
   font-size: 30pt;
   font-weight: 300;
   font-style: italic;
-  padding-left: 10px;
+  padding-left: 20px;
 }
 
-
 details {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  z-index: 1;
   background-color: white;
   border-radius: 10px;
-  margin: 10px;
+  margin: 10px auto;
   font-size: 15pt;
-  padding: 20px;
-  width: 900px;
+  padding: 25px;
   padding-right: 20px;
-  border-right: 40px solid white;
+}
+
+@media (min-width: 900px) {
+  details {
+    width: 40%;
+  }
+}
+
+@media (max-width: 900px) {
+  img.earth {
+    width: 75%;
+  }
+  h1 {
+    font-size: 30pt;
+  }
 }
 
 details[open] summary ~ * {
@@ -102,7 +114,7 @@ details[open] summary ~ * {
 }
 
 details details {
-  width: 90%;
+  width: 80%;
   background-color: rgba(0,0,0,.2);
 }
 
@@ -112,10 +124,9 @@ details details {
 }
 
 footer {  
-  width: 100%;
   height: 30vh;
-  background: black;
-  padding: 20px 0 60px 20px;
+  padding: 10px 0 60px 20px;
+  background-color: rgba(0,0,0,.2);
 }
 
 .social {
@@ -125,23 +136,28 @@ footer {
 }
 
 a {
-  color: white;
+  color: rgba(255, 255, 255, 0.842);
 }
 
 img.my_photo {
   width: 100px;
   border-radius: 50%;
   box-shadow: 3px 3px 10px black;
-  border: 10px solid red;
 }
 
 .social a {
   display: flex;
   align-items: center;
   justify-content: space-around;
-  background-color: red;
+  background: rgb(212, 55, 16);
   width: 70px;
   height: 70px;
-  padding: 10px;
+  padding: 5px;
   border-radius: 50%;
+}
+
+img.anomaly {
+  margin-top: 10px;
+  width: 97%;
+  border-radius: 10px;
 }
