@@ -88,6 +88,10 @@ i:hover {
   padding-top: 100px;
 }
 
+iframe {
+  border: none;
+}
+
 .bar {
   background-color: rgb(99, 99, 99);
   padding: 6px;
